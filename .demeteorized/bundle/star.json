@@ -1,0 +1,31 @@
+{
+  "format": "site-archive-pre1",
+  "builtBy": "Meteor METEOR@1.3.1",
+  "programs": [
+    {
+      "name": "web.browser",
+      "arch": "web.browser",
+      "path": "programs/web.browser/program.json"
+    },
+    {
+      "name": "web.cordova",
+      "arch": "web.cordova",
+      "path": "programs/web.cordova/program.json",
+      "cordovaDependencies": {
+        "cordova-plugin-geolocation": "2.1.0",
+        "org.flybuy.cordova.background-location-services": "https://github.com/pmwisdom/cordova-background-geolocation-services.git#d777aa9843408393a2535a47518cfedd40af00be",
+        "cordova-plugin-whitelist": "1.2.1",
+        "cordova-plugin-wkwebview-engine": "1.0.2",
+        "cordova-plugin-meteor-webapp": "1.3.0",
+        "cordova-plugin-statusbar": "2.1.2",
+        "cordova-plugin-splashscreen": "3.2.1"
+      }
+    },
+    {
+      "name": "server",
+      "arch": "os.linux.x86_64",
+      "path": "programs/server/boot.js"
+    }
+  ],
+  "meteorRelease": "METEOR@1.3.1"
+}

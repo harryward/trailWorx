@@ -1,0 +1,181 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"BackgroundLocationServices\"><param name=\"ios-package\" value=\"HWPBackgroundLocationServices\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"CDVWKWebViewEngine\"><param name=\"ios-package\" value=\"CDVWKWebViewEngine\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"CordovaWebViewEngine\" value=\"CDVWKWebViewEngine\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"WebAppLocalServer\"><param name=\"ios-package\" value=\"METWebAppLocalServer\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" value=\"CDVStatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarOverlaysWebView\" value=\"true\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "NSLocationWhenInUseUsageDescription": [
+                        {
+                            "xml": "<string />",
+                            "count": 1
+                        }
+                    ],
+                    "NSLocationAlwaysUsageDescription": [
+                        {
+                            "xml": "<string>${EXECUTABLE_NAME} Would Like to Use Your Current Location Even In Background.</string>",
+                            "count": 1
+                        }
+                    ],
+                    "UIBackgroundModes": [
+                        {
+                            "xml": "<array><string>location</string></array>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.idieq1go10g1jb4s753tj"
+        },
+        "org.flybuy.cordova.background-location-services": {
+            "PACKAGE_NAME": "com.idieq1go10g1jb4s753tj"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.idieq1go10g1jb4s753tj"
+        },
+        "cordova-plugin-wkwebview-engine": {
+            "PACKAGE_NAME": "com.idieq1go10g1jb4s753tj"
+        },
+        "cordova-plugin-meteor-webapp": {
+            "PACKAGE_NAME": "com.idieq1go10g1jb4s753tj"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.idieq1go10g1jb4s753tj"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.idieq1go10g1jb4s753tj"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-geolocation/www/Coordinates.js",
+            "id": "cordova-plugin-geolocation.Coordinates",
+            "pluginId": "cordova-plugin-geolocation",
+            "clobbers": [
+                "Coordinates"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
+            "id": "cordova-plugin-geolocation.PositionError",
+            "pluginId": "cordova-plugin-geolocation",
+            "clobbers": [
+                "PositionError"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-geolocation/www/Position.js",
+            "id": "cordova-plugin-geolocation.Position",
+            "pluginId": "cordova-plugin-geolocation",
+            "clobbers": [
+                "Position"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-geolocation/www/geolocation.js",
+            "id": "cordova-plugin-geolocation.geolocation",
+            "pluginId": "cordova-plugin-geolocation",
+            "clobbers": [
+                "navigator.geolocation"
+            ]
+        },
+        {
+            "file": "plugins/org.flybuy.cordova.background-location-services/www/BackgroundLocationServices.js",
+            "id": "org.flybuy.cordova.background-location-services.BackgroundLocationServices",
+            "pluginId": "org.flybuy.cordova.background-location-services",
+            "clobbers": [
+                "plugins.backgroundLocationServices"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-wkwebview-engine/src/www/ios/ios-wkwebview-exec.js",
+            "id": "cordova-plugin-wkwebview-engine.ios-wkwebview-exec",
+            "pluginId": "cordova-plugin-wkwebview-engine",
+            "clobbers": [
+                "cordova.exec"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-meteor-webapp/www/webapp_local_server.js",
+            "id": "cordova-plugin-meteor-webapp.WebAppLocalServer",
+            "pluginId": "cordova-plugin-meteor-webapp",
+            "merges": [
+                "WebAppLocalServer"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+            "id": "cordova-plugin-statusbar.statusbar",
+            "pluginId": "cordova-plugin-statusbar",
+            "clobbers": [
+                "window.StatusBar"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "pluginId": "cordova-plugin-splashscreen",
+            "clobbers": [
+                "navigator.splashscreen"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-geolocation": "2.1.0",
+        "org.flybuy.cordova.background-location-services": "1.0.0",
+        "cordova-plugin-whitelist": "1.2.1",
+        "cordova-plugin-wkwebview-engine": "1.0.2",
+        "cordova-plugin-meteor-webapp": "1.3.0",
+        "cordova-plugin-statusbar": "2.1.2",
+        "cordova-plugin-splashscreen": "3.2.1"
+    }
+}

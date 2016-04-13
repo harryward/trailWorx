@@ -1,0 +1,19 @@
+/* CSS declarations go here */
+
+.map-container {
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+}
+.at-form {
+    max-width: 400px;
+}
+pre {
+    background: #000;
+    color: #0F0;
+}
+.panel-heading {
+    background: #795548!important;
+    color: #FFF!important;
+    text-align: center;
+}
