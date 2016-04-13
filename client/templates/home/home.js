@@ -35,9 +35,14 @@ Template.home.onCreated(function () {
 
                 // Create and move the marker when latLng changes.
                 self.autorun(function() {
+
+                    _.each(Meteor.users.find().fetch(),function(use){
+
+                    if(use.profile || false){
                     var latLng = {
-                        lat:Meteor.user().profile.backgroundLocation.latitude,
-                        lng:Meteor.user().profile.backgroundLocation.longitude
+                        lat:use.profile.backgroundLocation.latitude,
+                        lng:use.profile.backgroundLocation.longitude
+                    }
                     }
 
                     if (! latLng)
@@ -46,7 +51,7 @@ Template.home.onCreated(function () {
                     // If the marker doesn't yet exist, create it.
                     if (! marker) {
                         console.log('adding marker..')
-                        marker = new google.maps.Marker({
+                        var userMarker = new google.maps.Marker({
                             position: new google.maps.LatLng(latLng.lat, latLng.lng),
                             map: map.instance,
                         });
@@ -55,15 +60,15 @@ Template.home.onCreated(function () {
                     // The marker already exists, so we'll just change its position.
                     else {
                         console.log('updating market position..')
-                        marker.setPosition(latLng);
+                        userMarker.setPosition(latLng);
                     }
 
                     // Center and zoom the map view onto the current position.
-                    map.instance.setCenter(marker.getPosition());
+                    //map.instance.setCenter(marker.getPosition());
                     //map.instance.setZoom(MAP_ZOOM);
 
 
-
+                    })
                 });
 
             });

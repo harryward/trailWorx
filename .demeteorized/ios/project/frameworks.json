@@ -1,9 +1,0 @@
-{
-    "CoreLocation.framework": 1,
-    "com.google.android.gms:play-services-location:+": 2,
-    "AudioToolbox.framework": 2,
-    "AVFoundation.framework": 2,
-    "WebKit.framework": 2,
-    "CFNetwork.framework": 2,
-    "libz.dylib": 2
-}
